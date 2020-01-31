@@ -1,0 +1,30 @@
+<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
+
+  <a class="navbar-brand" href="#">    Movie Hub  </a>    
+
+  <ul class="nav navbar-nav align-items-end float-right">
+  <% if controller_name != "sessions" %>
+  <li class="nav-item active">
+        <a class="nav-link movies" href="/movies">
+          <i class="fa fa-file-movie-o">
+            <!-- <span class="badge badge-warning">11</span> -->
+          </i>
+          Movies
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="fa fa-star-o">
+            <span class="badge badge-warning">11</span>
+          </i>
+          Favourites
+        </a>
+      </li>
+      <li class="nav-item">
+						<a class="nav-link" href="/logout"><i class="fa fa-user"></i> Logout </a>
+                    </li>
+    <% end %>
+    </ul>
+    
+</nav>
