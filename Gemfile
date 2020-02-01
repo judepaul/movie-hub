@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'pg', :group => :production
-gem 'mysql2' , :group => [:development, :test]
+gem 'mysql2', '>= 0.3.21' , :group => [:development, :test]
 
 
 group :development, :test do
