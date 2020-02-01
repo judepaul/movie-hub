@@ -2,7 +2,8 @@ $(document).ready(function () {
     //Validate username text field
     $("#username").on('keypress',function(){   
         if($(this).val().length>19){
-            alert("Hello there!\n You have reached the Max. character limit");
+            //alert("Hello there!\n You have reached the Max. character limit");
+            $('#validateLength').modal('show');
             return false;
            }
     });
@@ -10,7 +11,13 @@ $(document).ready(function () {
     //Validate special character in username text field
     $('#username').keyup(function() {
         var $th = $(this);
-        $th.val( $th.val().replace(/[^a-zA-Z0-9]/g, function(str) { alert('Hello there!\n You typed " ' + str + ' ".\nPlease use only letters, numbers and underscore.'); return ''; } ) );
+        $th.val( $th.val().replace(/[^a-zA-Z0-9]/g, function(str) 
+            { 
+                // alert('Hello there!\n You typed " ' + str + ' ".\nPlease use only letters, numbers and underscore.'); 
+                $('#specialChar').modal('show');    
+            return ''; 
+        }) 
+    );
     });
 
     //This is to remove the validation message if no poster image is present
