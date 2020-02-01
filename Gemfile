@@ -31,9 +31,9 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-group :production do
-  gem 'pg'
-end
+gem 'pg', :group => :production
+gem 'mysql2' , :group => [:development, :test]
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -42,7 +42,7 @@ group :development, :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Use mysql as the database for Active Record
-  gem 'mysql2', '>= 0.3.21'
+  # gem 'mysql2', '>= 0.3.21'
 end
 
 group :development do
