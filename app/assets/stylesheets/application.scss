@@ -329,12 +329,15 @@ body {
   .navbar-icon-top.navbar-expand-xl .navbar-nav .nav-link > .fa > .badge {
     top: -7px;
   }
-
+.navbar-text-welcome {
+    font-size: 15px;
+    color: #FFF;
+}
   .navbar-brand {
     display: inline-block;
     padding-top: 12px;
     padding-bottom: 0.3125rem;
-    margin-right: 700px;
+    margin-right: 600px;
     font-size: 1.25rem;
     line-height: inherit;
     white-space: nowrap;

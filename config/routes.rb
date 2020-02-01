@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get '/home' => 'home#index'
+  # get '/home' => 'home#index'
 
   resources :movies
   # these routes are for showing users a login form, logging them in, and logging them out.
@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get '/users/new' => 'users#new', as: 'signup'
   post '/users' => 'users#create'
+
+  get '/user/favourites' => 'favourites#user_favourites'
 
   root :to => "sessions#new"
 

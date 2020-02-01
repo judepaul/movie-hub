@@ -13,4 +13,12 @@ module ApplicationHelper
             flash_type.to_s
           end
         end
+
+        def welcome_text(id)
+            if id.nil?
+                'Guest'
+            else
+                username = !User.find(id).blank? ? User.find(id).username : 'Guest'
+            end
+        end
 end
