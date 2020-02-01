@@ -4,7 +4,7 @@
         <div class="avatar"><i class="material-icons">&#xE7FF;</i></div>
     	<h4 class="modal-title">Login to Movie Hub</h4>
         <div class="form-group">
-            <%= text_field_tag :username, "", {class:"form-control", placeholder:"Username", required:"required", id:"username"} %>
+            <%= text_field_tag :username, "", {class:"form-control", placeholder:"Username", required:"required", id:"username",  maxlength: "20"} %>
         </div>
         <div class="text-right">
             <button type="button" class="btn btn-info btn-lg trigger-btn">Go</div>

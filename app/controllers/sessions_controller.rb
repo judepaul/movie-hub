@@ -6,18 +6,15 @@ class SessionsController < ApplicationController
     def create
         p "!!!!!!"
         user = User.find_by(username: params[:username])
-        p user
         # check user exists
         if user.nil?
           user = User.new
           user.username = params[:username]
           user.save
-          @user = user
-          p @user
+          session[:username] = user.username
           redirect_to movies_path
         else
-            p "@@@@@@"
-          @user = user
+          session[:username] = user.username
           flash.notice = "Signed in Successfully"
           redirect_to movies_path
         end

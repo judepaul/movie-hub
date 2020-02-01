@@ -1,4 +1,12 @@
 $(document).ready(function () {
+    //Validate username text field
+    $("#username").on('keypress',function(){   
+        if($(this).val().length>19){
+            alert("Hello \n You have reached the Max. character limit");
+            return false;
+           }
+    });
+
     //This is to remove the validation message if no poster image is present
     $('.trigger-btn').click(function () {
         $("#display_name").text("");
