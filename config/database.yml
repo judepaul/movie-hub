@@ -56,4 +56,4 @@ production:
   adapter: postgresql
   encoding: utf8
   pool: 5
-  database: moviehub_production
+  database: postgres
