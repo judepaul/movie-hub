@@ -7,6 +7,12 @@ $(document).ready(function () {
            }
     });
 
+    //Validate special character in username text field
+    $('#username').keyup(function() {
+        var $th = $(this);
+        $th.val( $th.val().replace(/[^a-zA-Z0-9]/g, function(str) { alert('Hello\n You typed " ' + str + ' ".\nPlease use only letters, numbers and underscore.'); return ''; } ) );
+    });
+
     //This is to remove the validation message if no poster image is present
     $('.trigger-btn').click(function () {
         $("#display_name").text("");
