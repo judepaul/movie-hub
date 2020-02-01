@@ -4,14 +4,20 @@ class SessionsController < ApplicationController
     end
   
     def create
+        p "!!!!!!"
         user = User.find_by(username: params[:username])
         p user
         # check user exists
         if user.nil?
-          flash.notice = "Invalid username to login"
-          redirect_to movies_path
+          user = User.new
+          user.username = params[:username]
+          user.save
+          @user = user
+          p @user
+          redirect_to movies_path(id:user.id)
         else
-          session[:user_id] = user.id
+            p "@@@@@@"
+          @user = user
           flash.notice = "Signed in Successfully"
           redirect_to movies_path
         end
