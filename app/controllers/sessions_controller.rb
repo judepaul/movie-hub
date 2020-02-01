@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
           user.save
           @user = user
           p @user
-          redirect_to movies_path(id:user.id)
+          redirect_to movies_path
         else
             p "@@@@@@"
           @user = user
